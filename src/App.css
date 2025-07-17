@@ -56,22 +56,19 @@
 .danger {background-color: #f44336;} 
 .danger:hover {background: #da190b;}
 
-.equipo-a {
+p {
   font-family: "Arial", sans-serif; /*  O elige tu fuente favorita */
   font-size: 1.2em; /*  Ajusta el tamaño de la fuente */
   line-height: 1.6; /*  Aumenta el espacio entre líneas */
   letter-spacing: 0.05em; /*  Ajusta el espacio entre letras */
-  color: #e60202; /*  Color oscuro para el texto */
   margin-bottom: 1.2em; /*  Espacio inferior */
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sutil sombra */
 }
 
+.equipo-a {
+  color: #e60202; /*  Color para el texto */
+}
+
 .equipo-b {
-  font-family: "Arial", sans-serif; /*  O elige tu fuente favorita */
-  font-size: 1.2em; /*  Ajusta el tamaño de la fuente */
-  line-height: 1.6; /*  Aumenta el espacio entre líneas */
-  letter-spacing: 0.05em; /*  Ajusta el espacio entre letras */
-  color: #2805f1; /*  Color oscuro para el texto */
-  margin-bottom: 1.2em; /*  Espacio inferior */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sutil sombra */
+  color: #2805f1; /*  Color para el texto */
 }

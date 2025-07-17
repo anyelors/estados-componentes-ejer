@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 const LogicalNot = () => {
 
@@ -6,10 +6,10 @@ const LogicalNot = () => {
 
   return (
     <>
-      <button 
-            onClick={() => setToggle(!toggle)} 
-            className="btn primary">
-          Toggle Estado
+      <button
+        onClick={() => setToggle(!toggle)}
+        className="btn success">
+        Toggle Estado {toggle ? 'ON' : 'OFF'}
       </button>
       {toggle && (
         <ul>
@@ -23,4 +23,5 @@ const LogicalNot = () => {
     </>
   )
 }
-export default LogicalNot
+
+export default LogicalNot;

@@ -9,6 +9,8 @@ import EquipoGanador from './components/EquipoGanador';
 import EquipoA from './components/EquipoA';
 import EquipoB from './components/EquipoB';
 import LogicalNot from './components/LogicalNot';
+import PuntosEquipo from './components/PuntosEquipo';
+import useToggle1 from './hook/useToggle1';
 
 function App() {
   const [contador, setContador] = useState(0);
@@ -18,10 +20,12 @@ function App() {
   const [puntosB, setPuntosB] = useState(0);
   const [on, toggle] = useToggle(true);
 
+  const [abierto, alternar] = useToggle1();
+
   function ToggleDemo({ on, toggle }) {
     return (
       <div>
-        <label className="toggle">
+        <label>
           <input
             onChange={toggle}
             type="checkbox"
@@ -49,6 +53,8 @@ function App() {
         <br /><br />
         <h2>4.ariketa – Estado compartido: puntuaciones de dos equipos</h2>
         <EquipoGanador puntosA={puntosA} puntosB={puntosB} />
+        <PuntosEquipo nombre={"Equipo A"} setPuntos={setPuntosA} />
+        <PuntosEquipo nombre={"Equipo B"} setPuntos={setPuntosB} />
         <EquipoA setPuntosA={setPuntosA} />
         <EquipoB setPuntosB={setPuntosB} />
         <br /><br />
@@ -63,6 +69,19 @@ function App() {
         <ToggleDemo toggle={toggle} on={on} />
         <br />
         <LogicalNot />
+        <br /><br />
+        <button
+          onClick={alternar}
+          className="btn success">
+          Toggle Estado {abierto ? 'ON' : 'OFF'}
+        </button>
+        {abierto && (
+          <ul>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+          </ul>
+        )}
         <br /><br />
       </header>
     </div>

@@ -8,9 +8,9 @@ function CambiaColor({ color, setColor }) {
                 onChange={(e) => setColor(e.target.value)}
                 style={{ fontSize: "1rem", padding: "0.5rem" }}
             >
-                <option value="red">Rojo</option>
-                <option value="blue">Azul</option>
-                <option value="green">Verde</option>
+                <option value="red">🟥 Rojo</option>
+                <option value="blue">🟦 Azul</option>
+                <option value="green">🟩 Verde</option>
             </select>
         </>
     );
